@@ -232,45 +232,43 @@
       </ul>
     </section>
 
-    <!-- Новости -->
-    <article class="news-preview">
-      <h2 class="news-preview__title">
-        <a class="news-preview__link link" href="#">10 способов сервировки  фруктовых щербетов к  столу</a>
-      </h2>
-      <p class="news-preview_desc">Новое в нашем блоге</p>
-    </article>
-
-    <!-- Рассылка -->
-    <section class="signup">
-      <h2 class="signup__title visually-hidden"></h2>
-      <p class="signup__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у
-        нас происходит. Обещаем не
-        спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <form class="signup__form" action="https://echo.htmlacademy.ru" method="GET">
-        <label class="signup__label">
-          <input class="signup__input input-field" type="text" aria-label="Поле для ввода электронной почты"
-            placeholder="email@example.com">
-          <button class="signup__button button">Отправить</button>
-        </label>
-      </form>
-    </section>
+    <div class="section-wrapper">
+      <!-- Новости -->
+      <article class="news-preview">
+        <h2 class="news-preview__title">
+          <a class="news-preview__link link" href="#">10 способов сервировки <br>фруктовых щербетов к <br>столу</a>
+        </h2>
+        <p class="news-preview_desc">Новое в нашем блоге</p>
+      </article>
+      
+      <!-- Рассылка -->
+      <section class="signup">
+        <h2 class="signup__title visually-hidden"></h2>
+        <p class="signup__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у
+          нас происходит. Обещаем не
+          спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form class="signup__form" action="https://echo.htmlacademy.ru" method="GET">
+          <label class="signup__label">
+            <input class="signup__input input-field" type="text" aria-label="Поле для ввода электронной почты"
+              placeholder="email@example.com">
+            <button class="signup__button button">Отправить</button>
+          </label>
+        </form>
+      </section>
+    </div>
 
     <!-- Карта -->
     <section class="map">
-      <h2 class="map__title visually-hidden">Раздел с картой</h2>
-      <img src="img/map.png" width="1250" height="427"
-        alt="Карта с адресом главного офиса магазина мороженого «Глейси»">
-    </section>
-
-    <!-- Контакты -->
-    <section class="contacts">
-      <h2 class="contacts__title visually-hidden">Раздел с адресом офиса и контактным телефоном</h2>
-      <p class="contacts__text">Адрес главного офиса и офлайн-магазина:</p>
-      <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-      <p class="contacts__text">Для заказов по телефону:</p>
-      <a class="contacts__tel" href="tel:+78124502525">8 812 450-25-25</a>
-      <p class="contacts__text">(с 10 до 20 ежедневно) </p>
-      <a class="contacts__button button" href="#" aria-label="Ссылка на форму обратной связи">Форма обратной связи</a>
+      <h2 class="map__title visually-hidden">Раздел с картой и контактами офиса</h2>
+      <img src="img/map.png" width="1250" height="427" alt="Карта с адресом главного офиса магазина мороженого «Глейси»">
+      <div class="contacts map__contacts">
+        <p class="contacts__text">Адрес главного офиса и офлайн-магазина:</p>
+        <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+        <p class="contacts__text">Для заказов по телефону:</p>
+        <a class="contacts__tel" href="tel:+78124502525">8 812 450-25-25</a>
+        <p class="contacts__text">(с 10 до 20 ежедневно) </p>
+        <a class="contacts__button button" href="#" aria-label="Ссылка на форму обратной связи">Форма обратной связи</a>
+      </div>
     </section>
   </main>
 
