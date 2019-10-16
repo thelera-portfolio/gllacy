@@ -12,8 +12,8 @@
   <header class="header">
     <nav class="main-navigation">
       <!-- Логотип -->
-      <a class="main-navigation__logo">
-        <img src="img/logo.png" width="154" height="64" alt="Логотип интернет-магазина мороженого «Глейси»">
+      <a class="main-navigation__logo" href="index.html">
+        <img src="img/logo.svg" width="154" height="64" alt="Логотип интернет-магазина мороженого «Глейси»">
       </a>
       <!-- Основное меню сайта -->
       <ul class="main-menu main-navigation__main-menu">
@@ -85,7 +85,7 @@
         <!-- Ссылка на корзину товаров -->
         <a class="basket__link" href="#" aria-label="Вход в корзину покупок">Пусто</a>
         <!-- Корзина с товарами -->
-        <div class="basket__full basket-full">
+        <form class="basket__full basket-full" action="https://echo.htmlacademy.ru" method="GET">
           <dl class="basket-full__list">
             <dt class="basket-full__title">Пломбир с апельсиновым джемом</dt>
             <dd class="basket-full__desc">1,5 кг x <span class="basket-full__desc_price">200 руб.</span></dd>
@@ -96,16 +96,17 @@
             <dd class="basket-full__desc">450 руб.</dd>
           </dl>
           <p class="basket-full__text">Итого: 750 руб.</p>
-          <a class="basket-full__button button" href="#">Оформить заказ</a>
-        </div>
+  
+          <input type="hidden" name="ice-cream-orange" value="300rub">
+          <input type="hidden" name="ice-cream-strawberry-choco" value="450rub">
+          <button class="basket-full__button button">Оформить заказ</button>
+        </form>
       </div>
     </nav>
     <!-- Режим работы и телефон -->
     <p class="header__text">
       <span class="header__work-hours">c 10 до 20, ежедневно</span>
-      <span class="header__tel">
-        <a class="header__tel-link link" href="tel:+78124502525">8 812 450-25-25</a>
-      </span>
+      <a class="header__tel-link link" href="tel:+78124502525">8 812 450-25-25</a>
     </p>
   </header>
 
@@ -232,7 +233,7 @@
           <a class="product-list__button button" href="#">Быстрый просмотр</a>
         </li>
         <li class="product-list__item">
-          <h3 class="product-list__title">Сливочное с брусничным<br>джемом  </h3>
+          <h3 class="product-list__title product-list__title_size_s">Сливочное с брусничным джемом  </h3>
           <img class="product-list__image" src="img/item-5.png" width="267" height="267"
             alt="Сливочное мороженое с брусничным джемом  ">
           <p class="product-list__price">
@@ -272,7 +273,7 @@
           <a class="product-list__button button" href="#">Быстрый просмотр</a>
         </li>
         <li class="product-list__item">
-          <h3 class="product-list__title">Сливочно-ванильное с<br>кусочками шоколада  </h3>
+          <h3 class="product-list__title product-list__title_size_s">Сливочно-ванильное с кусочками шоколада  </h3>
           <img class="product-list__image" src="img/item-9.png" width="267" height="267"
             alt="Сливочно-ванильное мороженое с кусочками шоколада  ">
           <p class="product-list__price">
@@ -331,23 +332,23 @@
   <footer class="footer">
     <!-- Социальные сети -->
     <ul class="socials">
-      <li class="socials__item">
+      <li class="socials__item socials__item_tw">
         <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» в Твиттер"></a>
       </li>
-      <li class="socials__item">
+      <li class="socials__item socials__item_inst">
         <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» в Инстаграм"></a>
       </li>
-      <li class="socials__item">
+      <li class="socials__item socials__item_fb">
         <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» на Фейсбуке"></a>
       </li>
-      <li class="socials__item">
+      <li class="socials__item socials__item_vk">
         <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» во Вконтакт"></a>
       </li>
     </ul>
   
     <!-- Навигация в подвале -->
     <ul class="footer-nav">
-      <li class="footer-nav__item">
+      <li class="footer-nav__item footer-nav__item_supplier">
         <a class="footer-nav__link link" href="#">Для поставщиков</a>
       </li>
       <li class="footer-nav__item">
@@ -363,7 +364,7 @@
   
     <!-- Copyright -->
     <div class="copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"></a>
       <p class="copyright__text">Сделано в HTML Academy © 2019</p>
     </div>
   </footer>

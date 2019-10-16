@@ -15,7 +15,7 @@
     <nav class="main-navigation">
       <!-- Логотип -->
       <a class="main-navigation__logo">
-        <img src="img/logo.png" width="154" height="64" alt="Логотип интернет-магазина мороженого «Глейси»">
+        <img src="img/logo.svg" width="154" height="64" alt="Логотип интернет-магазина мороженого «Глейси»">
       </a>
       <!-- Основное меню сайта -->
       <ul class="main-menu main-navigation__main-menu">
@@ -29,7 +29,7 @@
             <li class="inner-list__item">
               <a class="inner-list__link" href="catalog.html">Сливочное</a>
             </li>
-            <li class="inner-list__item">
+            <li class="inner-list__item inner-list__item_active">
               <a class="inner-list__link" href="#">Щербеты</a>
             </li>
             <li class="inner-list__item">
@@ -87,7 +87,7 @@
         <!-- Ссылка на корзину товаров -->
         <a class="basket__link" href="#" aria-label="Вход в корзину покупок">Пусто</a>
         <!-- Корзина с товарами -->
-        <div class="basket__full basket-full">
+        <form class="basket__full basket-full" action="https://echo.htmlacademy.ru" method="GET">
           <dl class="basket-full__list">
             <dt class="basket-full__title">Пломбир с апельсиновым джемом</dt>
             <dd class="basket-full__desc">1,5 кг x <span class="basket-full__desc_price">200 руб.</span></dd>
@@ -98,16 +98,17 @@
             <dd class="basket-full__desc">450 руб.</dd>
           </dl>
           <p class="basket-full__text">Итого: 750 руб.</p>
-          <a class="basket-full__button button" href="#">Оформить заказ</a>
-        </div>
+
+          <input type="hidden" name="ice-cream-orange" value="300rub">
+          <input type="hidden" name="ice-cream-strawberry-choco" value="450rub">
+          <button class="basket-full__button button">Оформить заказ</button>
+        </form>
       </div>
     </nav>
     <!-- Режим работы и телефон -->
     <p class="header__text">
       <span class="header__work-hours">c 10 до 20, ежедневно</span>
-      <span class="header__tel">
-        <a class="header__tel-link link" href="tel:+78124502525">8 812 450-25-25</a>
-      </span>
+      <a class="header__tel-link link" href="tel:+78124502525">8 812 450-25-25</a>
     </p>
   </header>
 
@@ -144,7 +145,7 @@
         </li>
         <!-- Слайд 3 -->
         <li class="promo-item promo-slider__promo-item">
-          <h3 class="promo-item__title">Пломбир с помадкой <br>и клубничный щербет</h3>
+          <h3 class="promo-item__title promo-item__title_size_s">Пломбир с помадкой  и клубничный щербет</h3>
           <img class="promo-item__image" src="img/ice-cream-3.png" width="639" height="586"
             alt="Мороженое «пломбир с помадкой  »">
           <a class="button promo-item__button" href="#">Давайте оба!</a>
@@ -244,7 +245,7 @@
       <!-- Новости -->
       <article class="news-preview">
         <h2 class="news-preview__title">
-          <a class="news-preview__link link" href="#">10 способов сервировки  <br>фруктовых щербетов к  <br>столу</a>
+          <a class="news-preview__link link" href="#">10 способов сервировки  фруктовых щербетов к  столу</a>
         </h2>
         <p class="news-preview_desc">Новое в нашем блоге</p>
       </article>
@@ -270,12 +271,12 @@
       <h2 class="map__title visually-hidden">Карта и контакты офиса</h2>
       <img class="map__image" src="img/map.png" width="1250" height="427" alt="Карта с адресом главного офиса магазина мороженого «Глейси»">
       <div class="contacts map__contacts">
-        <p class="contacts__text">Адрес главного офиса и офлайн-магазина:</p>
+        <p class="contacts__text">Главный офис и офлайн-магазин по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
         <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
         <p class="contacts__text">Для заказов по телефону:</p>
         <a class="contacts__tel" href="tel:+78124502525">8 812 450-25-25</a>
         <p class="contacts__text">(с 10 до 20 ежедневно) </p>
-        <a class="contacts__button button" href="#" aria-label="Ссылка на форму обратной связи">Форма обратной связи</a>
+        <a class="contacts__button button" href="form.html" aria-label="Ссылка на форму обратной связи">Форма обратной связи</a>
       </div>
     </section>
   </main>
@@ -284,23 +285,23 @@
   <footer class="footer">
     <!-- Социальные сети -->
     <ul class="socials">
-      <li class="socials__item">
+      <li class="socials__item socials__item_tw">
         <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» в Твиттер"></a>
       </li>
-      <li class="socials__item">
+      <li class="socials__item socials__item_inst">
         <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» в Инстаграм"></a>
       </li>
-      <li class="socials__item">
+      <li class="socials__item socials__item_fb">
         <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» на Фейсбуке"></a>
       </li>
-      <li class="socials__item">
+      <li class="socials__item socials__item_vk">
         <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» во Вконтакт"></a>
       </li>
     </ul>
 
     <!-- Навигация в подвале -->
     <ul class="footer-nav">
-      <li class="footer-nav__item">
+      <li class="footer-nav__item footer-nav__item_supplier">
         <a class="footer-nav__link link" href="#">Для поставщиков</a>
       </li>
       <li class="footer-nav__item">
@@ -316,7 +317,7 @@
 
     <!-- Copyright -->
     <div class="copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"></a>
       <p class="copyright__text">Сделано в HTML Academy © 2019</p>
     </div>
   </footer>

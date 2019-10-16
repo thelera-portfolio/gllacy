@@ -362,7 +362,10 @@ body {
 
 /* Режим работы и телефон */
 .header__text {
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
 
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 14px;
@@ -378,12 +381,6 @@ body {
   line-height: 24px;
   color: #FFFFFF;
   text-decoration: none;
-}
-
-.header__work-hours,
-.header__tel {
-  display: flex;
-  justify-content: flex-end;
 }
 
 /* Основное содержимое */
@@ -433,15 +430,22 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+
+  display: inline;
   margin: 0;
   margin-left: -340px;
-  width: 680px;
+  width: 670px;
 
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
   color: #FFFFFF;
+  text-align: center;
+}
+
+.promo-item__title_size_s {
+  width: 650px;
 }
 
 .promo-item__button {
@@ -687,7 +691,7 @@ body {
   box-sizing: border-box;
   min-height: 222px;
   padding-top: 22px;
-  padding-right: 23px;
+  padding-right: 225px;
   padding-bottom: 22px;
   padding-left: 23px;
   width: 565px;
@@ -845,19 +849,19 @@ body {
   background-position: 0 0;
 }
 
-.socials__item:first-child {
+.socials__item_tw {
   background-image: url('../img/twitter.svg');
 }
 
-.socials__item:nth-child(2) {
+.socials__item_inst {
   background-image: url('../img/instagram.svg');
 }
 
-.socials__item:nth-child(3) {
+.socials__item_fb {
   background-image: url('../img/facebook.svg');
 }
 
-.socials__item:nth-child(4) {
+.socials__item_vk {
   background-image: url('../img/vk.svg');
 }
 
@@ -891,15 +895,15 @@ body {
   width: 162px;
 }
 
-.footer-nav__item:first-child .footer-nav__link {
+.footer-nav__item_supplier .footer-nav__link {
   font-weight: 700;
 }
 
-.footer-nav__item:first-child {
+.footer-nav__item_supplier {
   position: relative;
 }
 
-.footer-nav__item:first-child::before {
+.footer-nav__item_supplier::before {
   content: '';
 
   position: absolute;
@@ -1184,6 +1188,7 @@ body {
 }
 
 .product-list__title {
+  align-self: center;
   margin: 0;
   order: 1;
   width: 267px;
@@ -1194,6 +1199,10 @@ body {
   line-height: 22px;
   color: #FFFFFF;
   text-align: center;
+}
+
+.product-list__title_size_s {
+  width: 205px;
 }
 
 .product-list__image {
