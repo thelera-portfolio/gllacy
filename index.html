@@ -49,33 +49,41 @@
       </ul>
       <!-- Поиск по сайту -->
       <form class="search main-navigation__search" action="https://echo.htmlacademy.ru" method="GET">
-        <label class="search__label" aria-label="Поиск по сайту">
-          <input class="search__input input-field" type="text" name="search" placeholder="Крем-брюле">
-        </label>
+        <label class="search__label" for="search" aria-label="Поиск по сайту"></label>
+        <div class="search__inner">
+          <input class="search__input input-field" type="text" name="search" id="search" placeholder="Крем-брюле">
+        </div>
+        
       </form>
       <!-- Раздел пользователя -->
       <!-- Кнопка входа в раздел пользователя -->
-      <ul class="user-account main-navigation__user-account">
-        <li class="user-account__item">
-          <a class="user-account__link" href="#" aria-label="Вход в личный кабинет">Вход</a>
-        </li>
-      </ul>
-      <!-- Форма авторизации -->
-      <div class="user-login">
-        <form class="user-login__form" action="https://echo.htmlacademy.ru" method="POST">
-          <label class="user-login__label" aria-label="Поле ввода электронной почты пользователя">
-            <input class="user-login__input input-field" type="text" placeholder="email@example.com">
-          </label>
-          <label class="user-login__label" aria-label="Поле ввода пароля">
-            <input class="user-login__input input-field" type="text" placeholder="********">
-          </label>
-          <button class="user-login__button button" type="submit">Войти</button>
-        </form>
-        <a class="user-login__link link" href="#">Забыли пароль?</a>
-        <a class="user-login__link link" href="#">Новая регистрация</a>
+      <div class="user-account main-navigation__user-account">
+        <ul class="user-account__list">
+          <li class="user-account__item">
+            <a class="user-account__link" href="#" aria-label="Вход в личный кабинет">Вход</a>
+          </li>
+        </ul>
+        <!-- Форма авторизации -->
+        <div class="user-login">
+          <form class="user-login__form" action="https://echo.htmlacademy.ru" method="POST">
+            <label class="user-login__label" aria-label="Поле ввода электронной почты пользователя">
+              <input class="user-login__input input-field" type="text" placeholder="email@example.com">
+            </label>
+            <label class="user-login__label" aria-label="Поле ввода пароля">
+              <input class="user-login__input input-field" type="text" placeholder="********">
+            </label>
+            <div class="user-login__inner">
+              <button class="user-login__button button" type="submit">Войти</button>
+              <p>
+                <a class="user-login__link link" href="#">Забыли пароль?</a>
+                <a class="user-login__link link" href="#">Новая регистрация</a>
+              </p>
+            </div>
+          </form>
+        </div>
       </div>
       <!-- Корзина -->
-      <div class="basket">
+      <div class="basket main-navigation__basket">
         <!-- Ссылка на корзину товаров -->
         <a class="basket__link" href="#" aria-label="Вход в корзину покупок">Пусто</a>
         <!-- Корзина с товарами -->
@@ -136,7 +144,7 @@
         </li>
         <!-- Слайд 3 -->
         <li class="promo-item promo-slider__promo-item">
-          <h3 class="promo-item__title">Пломбир с помадкой  и и клубничный щербет</h3>
+          <h3 class="promo-item__title">Пломбир с помадкой <br>и клубничный щербет</h3>
           <img class="promo-item__image" src="img/ice-cream-3.png" width="639" height="586"
             alt="Мороженое «пломбир с помадкой  »">
           <a class="button promo-item__button" href="#">Давайте оба!</a>
@@ -146,7 +154,7 @@
 
     <!-- Баннеры -->
     <section class="promo-banners">
-      <h2 class="promo-banners__title visually-hidden">Раздел с промо-баннерами</h2>
+      <h2 class="promo-banners__title visually-hidden">Промо-баннеры</h2>
       <ul class="promo-banners__list">
         <li class="banner-item promo-banners__banner-item">
           <h3 class="banner-item__title">Малинка даром!</h3>
@@ -163,69 +171,69 @@
       </ul>
     </section>
 
-    <!-- Хиты -->
+    <!-- Популярные товары -->
     <section class="popular-items">
-      <h2 class="popular-items__title visually-hidden">Раздел с самым популярным мороженым</h2>
-      <ul class="popular-items__polular-list polular-list">
-        <li class="polular-list__item polular-list__item_label_hit">
-          <h3 class="polular-list__title">Сливочное с апельсиновым джемом и цитрусовой стружкой </h3>
-          <img class="popular-items__image" src="img/item-1.png" width="267" height="267"
+      <h2 class="popular-items__title visually-hidden">Самые популярные товары</h2>
+      <ul class="popular-items__popular-list popular-list">
+        <li class="popular-list__item popular-list__item_label_hit">
+          <h3 class="popular-list__title">Сливочное с апельсиновым джемом и цитрусовой стружкой </h3>
+          <img class="popular-list__image" src="img/item-1.png" width="267" height="267"
             alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой ">
-          <p class="polular-list__price">
+          <p class="popular-list__price">
             <span>310 ₽</span>
-            <span class="polular-list__price_kg">/кг</span>
+            <span class="popular-list__price_kg">/кг</span>
           </p>
-          <a class="products-list__button button" href="#">Быстрый просмотр</a>
+          <a class="popular-list__button button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="polular-list__item polular-list__item_label_hit">
-          <h3 class="polular-list__title">Сливочно-кофейное с кусочками шоколада </h3>
-          <img class="popular-items__image" src="img/item-2.png" width="267" height="267"
+        <li class="popular-list__item popular-list__item_label_hit">
+          <h3 class="popular-list__title">Сливочно-кофейное с кусочками шоколада </h3>
+          <img class="popular-list__image" src="img/item-2.png" width="267" height="267"
             alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой ">
-          <p class="polular-list__price">
+          <p class="popular-list__price">
             <span>380 ₽</span>
-            <span>/кг</span>
+            <span class="popular-list__price_kg">/кг</span>
           </p>
-          <a class="products-list__button button" href="#">Быстрый просмотр</a>
+          <a class="popular-list__button button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="polular-list__item polular-list__item_label_hit">
-          <h3 class="polular-list__title">Сливочно-клубничное с присыпкой из белого шоколада </h3>
-          <img class="popular-items__image" src="img/item-3.png" width="267" height="267"
+        <li class="popular-list__item popular-list__item_label_hit">
+          <h3 class="popular-list__title">Сливочно-клубничное с присыпкой из белого шоколада </h3>
+          <img class="popular-list__image" src="img/item-3.png" width="267" height="267"
             alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой ">
-          <p class="polular-list__price">
+          <p class="popular-list__price">
             <span>355 ₽</span>
-            <span>/кг</span>
+            <span class="popular-list__price_kg">/кг</span>
           </p>
-          <a class="products-list__button button" href="#">Быстрый просмотр</a>
+          <a class="popular-list__button button" href="#">Быстрый просмотр</a>
         </li>
-        <li class="polular-list__item polular-list__item_label_hit">
-          <h3 class="polular-list__title">Сливочное крем-брюле с карамельной подливкой </h3>
-          <img class="popular-items__image" src="img/item-4.png" width="267" height="267"
+        <li class="popular-list__item popular-list__item_label_hit">
+          <h3 class="popular-list__title">Сливочное крем-брюле с карамельной подливкой </h3>
+          <img class="popular-list__image" src="img/item-4.png" width="267" height="267"
             alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой ">
-          <p class="polular-list__price">
+          <p class="popular-list__price">
             <span>415 ₽</span>
-            <span>/кг</span>
+            <span class="popular-list__price_kg">/кг</span>
           </p>
-          <a class="products-list__button button" href="#">Быстрый просмотр</a>
+          <a class="popular-list__button button" href="#">Быстрый просмотр</a>
         </li>
       </ul>
 
     </section>
 
     <!-- Преимущества компании -->
-    <section class="features">
-      <h2 class="features__title visually-hidden">Раздел с преимуществами компании</h2>
+    <section class="features main__features">
+      <h2 class="features__title visually-hidden">Преимущества компании</h2>
       <p class="features__text">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного
         производства на развес</p>
       <ul class="features__list">
         <li class="features__item">Все наше мороженое изготавливается на собственном производстве, с использованием
           современного оборудования и проверенных
           временем технологий. </li>
-        <li class="features__item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего
-          качества. Все дополнительные ингредиенты
-          и добавки произведены из натурального, экологически чистого сырья.  </li>
         <li class="features__item">Закупка ингредиентов производится только у проверенных фермерских хозяйств и
           компаний, с которыми нас связывает
           долговременное сотрудничество. </li>
+        <li class="features__item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего
+          качества. Все дополнительные ингредиенты
+          и добавки произведены из натурального, экологически чистого сырья.</li>
         <li class="features__item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
           который не дает мороженому растаять в
           пути и позволяет сохранить превосходный вкус. </li>
@@ -236,14 +244,14 @@
       <!-- Новости -->
       <article class="news-preview">
         <h2 class="news-preview__title">
-          <a class="news-preview__link link" href="#">10 способов сервировки <br>фруктовых щербетов к <br>столу</a>
+          <a class="news-preview__link link" href="#">10 способов сервировки  <br>фруктовых щербетов к  <br>столу</a>
         </h2>
         <p class="news-preview_desc">Новое в нашем блоге</p>
       </article>
       
       <!-- Рассылка -->
       <section class="signup">
-        <h2 class="signup__title visually-hidden"></h2>
+        <h2 class="signup__title visually-hidden">Подписка на рассылку</h2>
         <p class="signup__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у
           нас происходит. Обещаем не
           спамить и не слать всякой ненужной ерунды. Честно =)</p>
@@ -251,16 +259,16 @@
           <label class="signup__label">
             <input class="signup__input input-field" type="text" aria-label="Поле для ввода электронной почты"
               placeholder="email@example.com">
-            <button class="signup__button button">Отправить</button>
           </label>
+          <button class="signup__button button">Отправить</button>
         </form>
       </section>
     </div>
 
     <!-- Карта -->
     <section class="map">
-      <h2 class="map__title visually-hidden">Раздел с картой и контактами офиса</h2>
-      <img src="img/map.png" width="1250" height="427" alt="Карта с адресом главного офиса магазина мороженого «Глейси»">
+      <h2 class="map__title visually-hidden">Карта и контакты офиса</h2>
+      <img class="map__image" src="img/map.png" width="1250" height="427" alt="Карта с адресом главного офиса магазина мороженого «Глейси»">
       <div class="contacts map__contacts">
         <p class="contacts__text">Адрес главного офиса и офлайн-магазина:</p>
         <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
