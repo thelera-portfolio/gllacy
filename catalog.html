@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Каталог интеренет-магазина мороженого «Глейси»</title>
+  <title>Каталог интернет-магазина мороженого «Глейси»</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
@@ -87,12 +87,14 @@
         <form class="basket__full basket-full" action="https://echo.htmlacademy.ru" method="GET">
           <ul class="basket-full__list">
             <li class="basket-full__item">
+              <button class="basket-full__delete-button" type="button" aria-label="Удалить товар из корзины"></button>
               <img class="basket-full__image" src="img/basket-item-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
               <p class="basket-full__title">Пломбир с апельсиновым джемом</p>
               <span class="basket-full__desc">1,5 кг x <span class="basket-full__desc_price">200 руб.</span></span>
               <span class="basket-full__desc">300 руб.</span>
             </li>
             <li class="basket-full__item">
+              <button class="basket-full__delete-button" type="button" aria-label="Удалить товар из корзины"></button>
               <img class="basket-full__image" src="img/basket-item-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой  из белого шоколада">
               <p class="basket-full__title">Клубничный пломбир с присыпкой  из белого шоколада</p>
               <span class="basket-full__desc">1,5 кг x <span class="basket-full__desc_price">300 руб.</span></span>
@@ -110,7 +112,7 @@
     <!-- Режим работы и телефон -->
     <p class="header__text">
       <span class="header__work-hours">С 10 до 20, ежедневно</span>
-      <a class="header__tel-link link" href="tel:+78124502525">8 812 450-25-25</a>
+      <a class="header__tel-link" href="tel:+78124502525">8 812 450-25-25</a>
     </p>
   </header>
 
@@ -121,10 +123,11 @@
     <!-- Хлебные крошки -->
     <ul class="breadcrumbs main__breadcrumbs">
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="index.html">Главная</a>
-        <span class="breadcrumbs__divider">»</span></li>
+        <a class="breadcrumbs__link link" href="index.html">Главная</a>
+        <span class="breadcrumbs__divider">»</span>
+      </li>
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+        <a class="breadcrumbs__link link" href="catalog.html">Каталог</a>
         <span class="breadcrumbs__divider">»</span>
       </li>
       <li class="breadcrumbs__item breadcrumbs__item_current">Сливочное</li>
@@ -364,24 +367,28 @@
         <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» на Фейсбуке"></a>
       </li>
       <li class="socials__item socials__item_vk">
-        <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» во Вконтакт"></a>
+        <a class="socials__link" href="#" aria-label="Магазин мороженого «Глейси» во Вконтакте"></a>
       </li>
     </ul>
   
     <!-- Навигация в подвале -->
     <ul class="footer-nav">
-      <li class="footer-nav__item footer-nav__item_supplier">
-        <a class="footer-nav__link link" href="#">Для поставщиков</a>
-      </li>
-      <li class="footer-nav__item">
-        <a class="footer-nav__link link" href="#">Наши документы</a>
-      </li>
-      <li class="footer-nav__item">
-        <a class="footer-nav__link link" href="#">О производстве</a>
-      </li>
-      <li class="footer-nav__item">
-        <a class="footer-nav__link link" href="#">Экологические стандарты</a>
-      </li>
+      <div class="footer-nav__column">
+        <li class="footer-nav__item footer-nav__item_supplier">
+          <a class="footer-nav__link link" href="#">Для поставщиков</a>
+        </li>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link link" href="#">О производстве</a>
+        </li>
+      </div>
+      <div class="footer-nav__column">
+        <li class="footer-nav__item">
+          <a class="footer-nav__link link" href="#">Наши документы</a>
+        </li>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link link" href="#">Экологические стандарты</a>
+        </li>
+      </div>
     </ul>
   
     <!-- Copyright -->
