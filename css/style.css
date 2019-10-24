@@ -1,3 +1,16 @@
+@keyframes bounce {
+  0% {transform: translateY(-2000px);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
 body {
  background-color: #849D8F;
 }
@@ -331,16 +344,7 @@ body {
 }
 
 .search__label {
-  position: relative;
-}
-
-.search__label::before {
-  content: '';
-
-  position: absolute;
-  top: 1px;
-  left: 0;
-
+  display: block;
   width: 32px;
   height: 32px;
 
@@ -351,7 +355,7 @@ body {
   border-radius: 50%;
 }
 
-.search__label:hover::before {
+.search__label:hover {
   background-image: url('../img/loupe-hovered.svg');
 }
 
@@ -1278,22 +1282,21 @@ body {
 /* Карта */
 .map {
   position: relative;
+
+  width: 1200px;
+  height: 429px;
+
+  overflow: hidden;
+}
+
+.map__iframe {
+  display: block;
+  border: none;
 }
 
 .map__image {
   display: block;
   margin: 0 auto;
-}
-
-.map::after {
-  content: url('../img/map-pin.png');
-
-  position: absolute;
-  top: 139px;
-  left: 266px;
-
-  width: 80px;
-  height: 140px;
 }
 
 .contacts {
@@ -1980,12 +1983,12 @@ body {
   position: absolute;
   top: -8px;
   z-index: 1;
-
-  width: 296px;
-  height: calc(100% + 80px);
 }
 
 .product-list__item:hover::before {
+  width: 296px;
+  height: calc(100% + 80px);
+  
   background: rgba(248, 247, 244, 0.2);
   box-shadow: 0 20px 20px 0 rgba(0,0,0,0.40);
   border-radius: 5px;
@@ -2111,8 +2114,46 @@ body {
   }
 
 /* Модальное окно с формой отправки сообщения */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay_show {
+  display: block;
+}
+
 .modal {
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
+  display: none;
+  margin-left: -238px;
+  margin-top: -221px;
+
+  vertical-align: middle;
+  
+  animation-name: bounce;
+  animation-duration: 1s;
+}
+
+.modal_show {
+  display: inline-block;
+}
+
+.modal_error {
+  animation-name: shake;
+  animation-duration: 1s;
 }
 
 .modal__form {
@@ -2133,6 +2174,8 @@ body {
 
   background-color: #F8F7F4;
   border-radius: 5px;
+
+  transition: all 2s;
 }
 
 .modal_text {
@@ -2180,8 +2223,3 @@ body {
 .modal__button {
   align-self: flex-end;
 }
-/**/
-/**/
-/**/
-/**/
-/**/
