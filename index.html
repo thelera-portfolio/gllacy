@@ -240,7 +240,7 @@
     <!-- Карта -->
     <section class="map">
       <h2 class="map__title visually-hidden">Карта и контакты офиса</h2>
-        <!-- <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CGDT7J1u" width="1200" height="429"  allowfullscreen="allowfullscreen"></iframe> -->
+        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CGDT7J1u" width="1200" height="429"  allowfullscreen="allowfullscreen" scroll="false"></iframe>
         <img class="map__image" src="img/map.png" width="1200" height="429" alt="Главный офис и офлайн-магазин по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург">
       <div class="contacts map__contacts">
         <p class="contacts__text">Адрес главного офиса и офлайн-магазина:</p>
@@ -272,24 +272,16 @@
     </ul>
 
     <!-- Навигация в подвале -->
-    <ul class="footer-nav">
+    <div class="footer-nav">
       <div class="footer-nav__column">
-        <li class="footer-nav__item footer-nav__item_supplier">
-          <a class="footer-nav__link link" href="#">Для поставщиков</a>
-        </li>
-        <li class="footer-nav__item">
+          <a class="footer-nav__link footer-nav__link_supplier link" href="#">Для поставщиков</a>
           <a class="footer-nav__link link" href="#">О производстве</a>
-        </li>
       </div>
       <div class="footer-nav__column">
-        <li class="footer-nav__item">
           <a class="footer-nav__link link" href="#">Наши документы</a>
-        </li>
-        <li class="footer-nav__item">
           <a class="footer-nav__link link" href="#">Экологические стандарты</a>
-        </li>
       </div>
-    </ul>
+    </div>
 
     <!-- Copyright -->
     <div class="copyright">
