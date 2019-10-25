@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 
-<body>
+<body class="body_background-color_one">
   <!-- Шапка сайта -->
   <header class="header">
     <nav class="main-navigation">
@@ -316,11 +316,37 @@
     var modalLink = document.querySelector(".contacts__button");//ссылка на форму в разделе "Контакты"
     var modalClose = document.querySelector(".modal__close-button");//кнопка закрытия модального окна
     var overlay = document.querySelector(".overlay");//затемнение экрана
-    var modalButton = document.querySelector(".modal__button");//кнопра "Отправить"
+    var modalButton = document.querySelector(".modal__button");//кнопка "Отправить"
 
+    //поля формы
     var modalNameInput = document.querySelector("[name=input-name]");
     var modalEmailInput = document.querySelector("[name=input-email]");
     var modalTextInput = document.querySelector("[name=input-text]");
+
+    //кнопки слайдера
+    var slideOneButton = document.querySelector("[id=product-1]");
+    var slideTwoButton = document.querySelector("[id=product-2]");
+    var slideThreeButton = document.querySelector("[id=product-3]");
+    var body = document.querySelector("body");
+
+    //переключение фонов при нажатии одной из кнопок слайдера
+    slideOneButton.addEventListener("click", function (evt) {
+      body.classList.remove("body_background-color_two");
+      body.classList.remove("body_background-color_three");
+      body.classList.add("body_background-color_one");
+    });
+    
+    slideTwoButton.addEventListener("click", function (evt) {
+      body.classList.remove("body_background-color_one");
+      body.classList.remove("body_background-color_three");
+      body.classList.add("body_background-color_two");
+    });
+
+    slideThreeButton.addEventListener("click", function (evt) {
+      body.classList.remove("body_background-color_two");
+      body.classList.remove("body_background-color_one");
+      body.classList.add("body_background-color_three");
+    });
 
     //при клике на кнопку "Форма обратной связи" показываем модальное окно
     modalLink.addEventListener("click", function (evt) {
@@ -356,6 +382,7 @@
       overlay.classList.remove("overlay_show");
     });  
 
+    //выход из формы при нажатии клавиши escape
     window.addEventListener("keydown", function (evt) {
       if (evt.keyCode === 27) {
         if (modal.classList.contains("modal_show")) {
@@ -366,8 +393,6 @@
         }
       }
     });
-    //выход из формы при нажатии клавиши escape
-    //при нажатии "Enter" отправляем форму
   </script>
 </body>
 </html>

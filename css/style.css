@@ -11,18 +11,35 @@
   20%, 40%, 60%, 80% {transform: translateX(10px);}
 }
 
-body {
- background-color: #849D8F;
+/* фоны при переключении слайдов */
+.body_background-color_one {
+  background-color: #849D8F;
+  background-image: url('../img/body-back-1.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
+
+.body_background-color_two {
+  background-color: #8996A6;
+  background-image: url('../img/body-back-2.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
+
+.body_background-color_three {
+  background-color: #9C8A83;
+  background-image: url('../img/body-back-3.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 
 /* * {
-  outline: 1px solid black;
-} */
-
-* {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 .visually-hidden {
   position: absolute;
@@ -151,7 +168,6 @@ body {
   align-items: center;
 }
 
-/* Логотип */
 /* Основное меню сайта */
 .main-menu {
   display: flex;
@@ -159,7 +175,6 @@ body {
   max-width: 710px;
   margin: 0;
   padding: 0;
-  /* padding-top: 5px; */
   padding-right: 23px;
   padding-left: 10px;
 
@@ -178,7 +193,6 @@ body {
 .main-menu__item {
   position: relative;
 
-  /* padding-top: 15px; */
   padding-bottom: 15px;
 }
 
@@ -558,7 +572,6 @@ body {
 }
 
 /* Корзина */
-/* Ссылка на корзину товаров */
 .basket {
   position: relative;
   padding-top: 15px;
@@ -854,7 +867,7 @@ body {
   margin-top: -43px;
 }
 
-/* Переключение слайдов*/
+/* Переключение слайдов */
 .promo-slider__button:first-of-type:checked ~ .promo-slider__controls .promo-slider__label:first-child,
 .promo-slider__button:nth-of-type(2):checked ~ .promo-slider__controls .promo-slider__label:nth-child(2),
 .promo-slider__button:nth-of-type(3):checked ~ .promo-slider__controls .promo-slider__label:nth-child(3) {
@@ -866,19 +879,6 @@ body {
 .promo-slider__button:nth-of-type(3):checked ~ .promo-slider__list .promo-item:nth-child(3) {
   display: flex;
 }
-
-/* .promo-item::before {
-  content: 'hhh';
-
-  position: absolute;
-
-  width: 100%;
-  height: 900px;
-  z-index: -1;
-
-  background-image: radial-gradient(circle, white, #849D8F);
-  background-position: 50% 0;
-} */
 
 .promo-item__image {
   position: absolute;
@@ -1406,7 +1406,7 @@ body {
   border-top: none;
 }
 
-/* Социальные сети*/
+/* Социальные сети */
 .socials {
   display: flex;
   flex-wrap: wrap;
