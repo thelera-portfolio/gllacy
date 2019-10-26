@@ -11,6 +11,26 @@
   20%, 40%, 60%, 80% {transform: translateX(10px);}
 }
 
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  white-space: nowrap;
+  clip-path: inset(00%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
 /* фоны при переключении слайдов */
 .body_background-color_one {
   background-color: #849D8F;
@@ -44,22 +64,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 } */
-
-.visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-
-  border: 0;
-
-  white-space: nowrap;
-  clip-path: inset(00%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  }
 
 /* Кнопка */
 .button {
