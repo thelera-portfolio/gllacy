@@ -117,9 +117,9 @@
   </header>
 
   <!-- Основное содержимое -->
-  <main class="main catalog__main">
+  <main class="main main_catalog">
     <h1 class="main__title">Сливочное мороженое</h1>
-
+    
     <!-- Хлебные крошки -->
     <ul class="breadcrumbs main__breadcrumbs">
       <li class="breadcrumbs__item">
@@ -143,20 +143,21 @@
           <div class="catalog-filters__inner catalog-filters__inner_select">
             <select class="catalog-filters__select" name="sort">
               <option value="popular">по популярности</option>
-              <option value="value-2">value-2</option>
-              <option value="value-3">value-3</option>
+              <option value="price-low-high">сначала недорогие</option>
+              <option value="price-high-low">сначала дорогие</option>
+              <option value="fat">по жирности</option>
             </select>
           </div>
         </fieldset>
         <!-- Цена -->
         <fieldset class="catalog-filters__fieldset">
           <legend class="catalog-filters__legend">Цена: 100 руб. – 500 руб.</legend>
-          <div class="catalog-filters__inner">
-            <div class="catalog-filters__inner_range">
-              <label class="catalog-filters__label">
-                <input class="catalog-filters__range visually-hidden" type="range">
-              </label>
-            </div>
+          <div class="catalog-filters__inner catalog-filters__inner_range">
+            <label class="catalog-filters__label" aria-label="Ползунок с диапазоном цен товаров">
+              <input class="catalog-filters__range visually-hidden" type="range">
+            </label>
+            <button class="catalog-filters__range-button catalog-filters__range-button_one" type="button" aria-label="Кнопка ограничения цены слева"></button>
+            <button class="catalog-filters__range-button catalog-filters__range-button_two" type="button" aria-label="Кнопка ограничения цены справа"></button>
           </div>
         </fieldset>
         <!-- Жирность -->
